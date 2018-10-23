@@ -56,4 +56,108 @@ NSDictionary *headerDic = @{@"Content-Type":@"application/x-www-form-urlencoded"
         
 }];
 ```
+## API文档
 
+### 创建单例：
+
+```
++ (instancetype _Nonnull)sharedNetLib;
+```
+
+### 设置 requestHeader：
+
+```
+- (void)setRequestHeaderWithDic:(NSDictionary *_Nullable)dic;
+```
+
+|参数|说明|
+|:---:|:---:|
+|dic|存放requestHeader的键值对|
+
+### GET 请求
+
+```
+- (void)Get:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nonnull resultDic, bool isSuccess))finished;
+```
+
+|参数|说明|
+|:---:|:---:|
+|urlString|网络地址|
+|parameters|参数|
+|finished|返回数据回调|
+
+### POST 请求
+
+```
+- (void)Post:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+```
+
+|参数|说明|
+|:---:|:---:|
+|urlString|网络地址|
+|parameters|参数|
+|finished|返回数据回调|
+
+### PUT 请求
+
+```
+- (void)Put:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+```
+
+|参数|说明|
+|:---:|:---:|
+|urlString|网络地址|
+|parameters|参数|
+|finished|返回数据回调|
+
+### DELETE 请求
+
+```
+- (void)Delete:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+```
+
+|参数|说明|
+|:---:|:---:|
+|urlString|网络地址|
+|parameters|参数|
+|finished|返回数据回调|
+
+### 上传文件
+
+```
+- (void)uploadFileWithUrl:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters fileName:(NSString *)fileName filePath:(NSString *_Nonnull)filePath progress:(void(^_Nonnull)(float progress))progressBlock finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+```
+
+|参数|说明|
+|:---:|:---:|
+|urlString|网络地址|
+|parameters|参数|
+|filePath|本地存放文件路径|
+|progressBlock|上传进度回调|
+|finished|返回数据回调|
+
+### 文件下载
+
+```
+- (void)downloadFileWithUrl:(NSString *_Nonnull)urlString filePath:(NSString *_Nonnull)filePath progress:(void(^_Nullable)(float progress))progressBlock finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, BOOL isSuccess))finished;
+```
+
+|参数|说明|
+|:---:|:---:|
+|urlString|网络地址|
+|filePath|本地存放文件路径|
+|progressBlock|上传进度回调|
+|finished|返回数据回调|
+
+### 文件下载（断点续传）
+
+```
+- (void)downloadFileWithUrl:(NSString *_Nonnull)urlString filePath:(NSString *_Nonnull)filePath progress:(void(^_Nullable)(float progress))progressBlock finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, BOOL isSuccess))finished;
+```
+
+|参数|说明|
+|:---:|:---:|
+|urlString|网络地址|
+|filePath|本地存放文件路径|
+|progressBlock|上传进度回调|
+|finished|返回数据回调|

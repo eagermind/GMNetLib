@@ -13,16 +13,8 @@ GMNetLib 是一个基于 libcurl 封装的网络请求框架，添加国密算�
 启动IDE（如Xcode），把iOS包中的压缩文件中以下文件拷贝到项目文件夹下，并导入到项目工程中。
 
 * GMNetLib.framework
-* libcurl.a
-* libmix_bssl.a
 
 #### 步骤2：
-
-把iOS包中的压缩文件中以下文件夹拷贝到项目文件夹下，并在 Build Setting 选项卡的 Header Search Paths 中，添加对应路径。
-
-* include
-
-#### 步骤3：
 
 在 Build Phases 选项卡的 Link Binary With Libraries 中，增加以下依赖：
 
@@ -36,6 +28,7 @@ GMNetLib 是一个基于 libcurl 封装的网络请求框架，添加国密算�
 ```
 #import <GMNetLib/GMNetLib.h>
 ```
+
 ### 使用 cocoapods 导入
 
 ```

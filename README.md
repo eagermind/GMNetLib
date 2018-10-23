@@ -1,6 +1,6 @@
 # GMNetLib
 
-## GMNetLib介绍
+## 简介
 
 GMNetLib 是一个基于 libcurl 封装的网络请求框架，添加国密算法，安全可靠。
 

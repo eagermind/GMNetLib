@@ -23,6 +23,8 @@ GMNetLib 是一个基于 libcurl 封装的网络请求框架，添加国密算�
 
 ### cocoapods 导入
 
+在 podfile 文件中添加
+
 ```
 pod 'GMNetLib'
 ```

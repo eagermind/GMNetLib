@@ -25,11 +25,12 @@ GMNetLib 是一个添加国密算法的网络请求框架，让你的网络传�
 
 ### cocoapods 导入
 
-在 podfile 文件中添加
+1. 在 podfile 文件中添加
 
 ```
 pod 'GMNetLib'
 ```
+2. 运行 pod install
 
 ## 使用
 

@@ -17,9 +17,10 @@
 /** 创建单例 */
 + (instancetype _Nonnull)sharedNetLib;
 
-/** 设置requestheader
+/**
+ *  设置requestheader
  *
- *  dic :  存放requestheader的键值对
+ *  dic :  存放requestheaderd键值对
  */
 - (void)setRequestHeaderWithDic:(NSDictionary *_Nullable)dic;
 
@@ -31,7 +32,7 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Get_Curl:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nonnull resultDic, bool isSuccess))finished;
+- (void)Get:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nonnull resultDic, bool isSuccess))finished;
 
 /**
  * POST请求
@@ -40,7 +41,7 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Post_Curl:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)Post:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 
 /**
  * PUT请求
@@ -49,7 +50,7 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Put_Curl:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)Put:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 
 /**
  * DELETE请求
@@ -58,21 +59,21 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Delete_Curl:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)Delete:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 
 /**
  * 上传文件
  *
  * urlString      : 网络地址
  * parameters     : 参数
- * filePath       : 本地存放文件路径
+ * filePath       : 文件路径
  * progressBlock  : 上传进度回调
  * finished       : 返回数据回调
  */
 - (void)uploadFileWithUrl:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters fileName:(NSString *)fileName filePath:(NSString *_Nonnull)filePath progress:(void(^_Nonnull)(float progress))progressBlock finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 
 /**
- * 文件下载
+ * 普通文件下载
  *
  * urlString      : 网络路径
  * filePath       : 本地存放文件路径

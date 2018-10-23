@@ -2,7 +2,9 @@
 
 ## 简介
 
-GMNetLib 是一个基于 libcurl 封装的网络请求框架，添加国密算法，安全可靠。
+GMNetLib 是一个添加国密算法的网络请求框架，让你的网络传输过程安全可靠。
+
+使用 GMNetLib 你可以进行 GET，POST，DELETE，UPDATE 等网络请求，也可以上传、下载文件（包含断点续传）。
 
 ## 导入流程
 
@@ -35,5 +37,22 @@ pod 'GMNetLib'
 
 ```
 #import <GMNetLib/GMNetLib.h>
+```
+
+## Object-C 示例
+
+```
+// 传参
+NSDictionary *parame = @{···};
+    
+// 设置requestHeader    
+NSDictionary *headerDic = @{@"Content-Type":@"application/x-www-form-urlencoded",@"Accept":@"application/json"};
+    
+[[GMNetLib sharedNetLib] setRequestHeaderWithDic:headerDic];
+    
+// 发送请求
+[[GMNetLib sharedNetLib] Post:PostUrl parameters:parame finishedBlock:^(NSDictionary * _Nullable resultDic, bool isSuccess) {
+        
+}];
 ```
 

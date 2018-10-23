@@ -1,0 +1,6 @@
+framework module GMNetLib {
+  umbrella header "GMNetLib.h"
+
+  export *
+  module * { export * }
+}

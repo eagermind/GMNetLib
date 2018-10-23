@@ -21,9 +21,9 @@ GMNetLib 是一个基于 libcurl 封装的网络请求框架，添加国密算�
 * libc++.tbd
 * libz.tbd
 
-### 使用 cocoapods 导入
+### cocoapods 导入
 
-在需要调用 GMNetLib 的文件中，增加头文件引用。
+在 podfile 文件中添加
 
 ```
 pod 'GMNetLib'

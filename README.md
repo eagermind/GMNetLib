@@ -21,7 +21,7 @@ GMNetLib 是一个基于 libcurl 封装的网络请求框架，添加国密算�
 * libc++.tbd
 * libz.tbd
 
-#### 步骤4：
+#### 步骤3：
 
 在需要调用 GMNetLib 的文件中，增加头文件引用。
 

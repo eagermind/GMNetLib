@@ -32,7 +32,7 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Get:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nonnull resultDic, bool isSuccess))finished;
+- (void)get:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nonnull resultDic, bool isSuccess))finished;
 
 /**
  * POST请求
@@ -41,7 +41,7 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Post:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)post:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 
 /**
  * PUT请求
@@ -50,7 +50,7 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Put:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)put:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 
 /**
  * DELETE请求
@@ -59,7 +59,7 @@
  * parameters : 参数
  * finished   : 返回数据回调
  */
-- (void)Delete:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)delete:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 
 /**
  * 上传文件

@@ -77,7 +77,7 @@ NSDictionary *headerDic = @{@"Content-Type":@"application/x-www-form-urlencoded"
 ### GET 请求
 
 ```
-- (void)Get:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nonnull resultDic, bool isSuccess))finished;
+- (void)get:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nonnull resultDic, bool isSuccess))finished;
 ```
 
 |参数|说明|
@@ -89,7 +89,7 @@ NSDictionary *headerDic = @{@"Content-Type":@"application/x-www-form-urlencoded"
 ### POST 请求
 
 ```
-- (void)Post:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)post:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nonnull)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 ```
 
 |参数|说明|
@@ -101,7 +101,7 @@ NSDictionary *headerDic = @{@"Content-Type":@"application/x-www-form-urlencoded"
 ### PUT 请求
 
 ```
-- (void)Put:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)put:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 ```
 
 |参数|说明|
@@ -113,7 +113,7 @@ NSDictionary *headerDic = @{@"Content-Type":@"application/x-www-form-urlencoded"
 ### DELETE 请求
 
 ```
-- (void)Delete:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
+- (void)delete:(NSString *_Nonnull)urlString parameters:(NSDictionary *_Nullable)parameters finishedBlock:(void(^_Nullable)(NSDictionary * _Nullable resultDic, bool isSuccess))finished;
 ```
 
 |参数|说明|
@@ -161,3 +161,5 @@ NSDictionary *headerDic = @{@"Content-Type":@"application/x-www-form-urlencoded"
 |filePath|本地存放文件路径|
 |progressBlock|上传进度回调|
 |finished|返回数据回调|
+
+
